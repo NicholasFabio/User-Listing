@@ -28,16 +28,10 @@
             @endif
         
             <table class="table table-bordered">
-                <tr>
-                    <th>Name</th>
-                    <th>Surname</th>
-                    <th>FWfwf</th>
-                    <th width="80px"></th>
-                </tr>
+                
                 @foreach ($users as $user)
                 <tr>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->surname }}</td>
+                    <td>{{ $user->name }} {{ $user->surname }}</td>
                     <td>{{ $user->email }}</td>
                     <td>    
                         <form action="{{ route('users.destroy',$user->id) }}" method="POST">
